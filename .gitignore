@@ -29,46 +29,33 @@
 # Backup files:
 *~
 .*sw?
-\#*
 .DS_Store
 
-# StGit
-.stgit-edit.txt
 
 # Build directories:
-/binfilter/unxlng??
-/binfilter/unxlng??.pro
-/binfilter/unxlng???
-/binfilter/unxlng???.pro
-/binfilter/wntmsc???
-/binfilter/wntmsc???.pro
-/binfilter/wntgcc?
-/binfilter/wntgcc?.pro
-/binfilter/unxmac??
-/binfilter/unxmac??.pro
-/binfilter/unx?bsd??
-/binfilter/unx?bsd??.pro
-/binfilter/unxdfly??
-/binfilter/unxdfly??.pro
-/binfilter/unxso???
-/binfilter/unxso???.pro
-/binfilter/unxaig??
-/binfilter/unxaig??.pro
-/binfilter/unxios?
-/binfilter/unxios?.pro
-/binfilter/unxand?
-/binfilter/unxand?.pro
-
-# libxslt debug memdump
-.memdump
+/unxlng??
+/unxlng??.pro
+/unxlng???
+/unxlng???.pro
+/wntmsc???
+/wntmsc???.pro
+/wntgcc?
+/wntgcc?.pro
+/unxmac??
+/unxmac??.pro
+/unx?bsd??
+/unx?bsd??.pro
+/unxdfly??
+/unxdfly??.pro
+/unxso???
+/unxso???.pro
+/unxaig??
+/unxaig??.pro
+/unxios?
+/unxios?.pro
+/unxand?
+/unxand?.pro
 
 # LibreOffice lock files
 .~lock.*#
 
-# Everyone loves patching
-*.orig
-*.rej
-
-# Somepeople love debugging
-gdbtrace.log
-valgrind.log
