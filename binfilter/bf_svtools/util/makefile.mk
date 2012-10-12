@@ -41,7 +41,7 @@ LIB1FILES=	\
         $(SLB)$/unoiface.lib	\
         $(SLB)$/filter.lib		\
         $(SLB)$/igif.lib		\
-        $(SLB)$/jpeg.lib		\
+        $(SLB)$/jpeg_filter.lib		\
         $(SLB)$/ixpm.lib		\
         $(SLB)$/ixbm.lib		\
         $(SLB)$/numbers.lib 	\

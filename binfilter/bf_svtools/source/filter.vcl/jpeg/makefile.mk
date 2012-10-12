@@ -19,7 +19,7 @@
 PRJ=..$/..$/..$/..
 
 PRJNAME=binfilter
-TARGET=jpeg
+TARGET=jpeg_filter
 
 # --- Settings -----------------------------------------------------------
 
