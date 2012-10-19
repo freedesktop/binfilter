@@ -288,7 +288,7 @@ SbxValue::SbxValue( SbxDataType t, void* p ) : SbxBase()
         case SbxUSHORT:
         case SbxBOOL:       n |= SbxBYREF; aData.pUShort = (UINT16*) p; break;
         case SbxULONG:      n |= SbxBYREF; aData.pULong = (UINT32*) p; break;
-        case SbxCHAR:       n |= SbxBYREF; aData.pChar = (xub_Unicode*) p; break;
+        case SbxCHAR:       n |= SbxBYREF; aData.pChar = (sal_Unicode*) p; break;
         case SbxBYTE:       n |= SbxBYREF; aData.pByte = (BYTE*) p; break;
         case SbxINT:        n |= SbxBYREF; aData.pInt = (int*) p; break;
         case SbxOBJECT:
@@ -653,7 +653,7 @@ BOOL SbxValue::GetBool() const
 t SbxValue::g() const { SbxValues aRes(e); Get( aRes ); return aRes.m; }
 
 GET( GetByte,     SbxBYTE,       BYTE,             nByte )
-GET( GetChar,     SbxCHAR,       xub_Unicode,           nChar )
+GET( GetChar,     SbxCHAR,       sal_Unicode,           nChar )
 GET( GetCurrency, SbxCURRENCY,   SbxINT64,         nLong64 )
 GET( GetDate,     SbxDATE,       double,           nDouble )
 GET( GetDouble,   SbxDOUBLE,     double,           nDouble )
@@ -812,7 +812,7 @@ BOOL SbxValue::p( t n ) \
 { SbxValues aRes(e); aRes.m = n; Put( aRes ); return BOOL( !IsError() ); }
 
 PUT( PutByte,     SbxBYTE,       BYTE,             nByte )
-PUT( PutChar,     SbxCHAR,       xub_Unicode,      nChar )
+PUT( PutChar,     SbxCHAR,       sal_Unicode,      nChar )
 PUT( PutCurrency, SbxCURRENCY,   const SbxINT64&,  nLong64 )
 PUT( PutDate,     SbxDATE,       double,           nDouble )
 PUT( PutDouble,   SbxDOUBLE,     double,           nDouble )

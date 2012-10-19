@@ -1307,7 +1307,7 @@ void SmBinDiagonalNode::Arrange(const OutputDevice &rDev, const SmFormat &rForma
 /*N*/         aLclSize.Width() *= 182;
 /*N*/         aLclSize.Width() /= 267;
 /*N*/
-/*N*/       xub_Unicode cChar = pLeft->GetToken().cMathChar;
+/*N*/       sal_Unicode cChar = pLeft->GetToken().cMathChar;
 /*N*/       if (cChar != MS_LINE  &&  cChar != MS_DLINE)
 /*N*/           pLeft ->GetFont().SetSize(aLclSize);
 /*N*/
@@ -1964,7 +1964,7 @@ void SmRectangleNode::Draw(OutputDevice &rDev, const Point &rPosition) const
 
 /*N*/ void SmTextNode::Draw(OutputDevice &rDev, const Point& rPosition) const
 /*N*/ {
-/*N*/   if (IsPhantom()  ||  aText.Len() == 0  ||  aText.GetChar(0) == xub_Unicode('\0'))
+/*N*/   if (IsPhantom()  ||  aText.Len() == 0  ||  aText.GetChar(0) == sal_Unicode('\0'))
 /*N*/       return;
 /*N*/
 /*N*/     SmTmpDevice  aTmpDev ((OutputDevice &) rDev, FALSE);
@@ -2110,8 +2110,8 @@ void SmRectangleNode::Draw(OutputDevice &rDev, const Point &rPosition) const
 /*N*/ SmMathSymbolNode::SmMathSymbolNode(const SmToken &rNodeToken)
 /*N*/ : SmSpecialNode(NMATH, rNodeToken, FNT_MATH)
 /*N*/ {
-/*N*/   xub_Unicode cChar = GetToken().cMathChar;
-/*N*/   if ((xub_Unicode) '\0' != cChar)
+/*N*/   sal_Unicode cChar = GetToken().cMathChar;
+/*N*/   if ((sal_Unicode) '\0' != cChar)
 /*N*/       SetText( cChar );
 /*N*/ }
 
@@ -2191,7 +2191,7 @@ void SmRectangleNode::Draw(OutputDevice &rDev, const Point &rPosition) const
 /*N*/ {
 /*N*/   const XubString &rText = GetText();
 /*N*/
-/*N*/   if (rText.Len() == 0  ||  rText.GetChar(0) == xub_Unicode('\0'))
+/*N*/   if (rText.Len() == 0  ||  rText.GetChar(0) == sal_Unicode('\0'))
 /*N*/   {   SmRect::operator = (SmRect());
 /*N*/       return;
 /*N*/   }
@@ -2327,7 +2327,7 @@ void SmGlyphSpecialNode::Arrange(const OutputDevice &rDev, const SmFormat &rForm
 /*N*/   aTmpDev.SetFont(GetFont());
 /*N*/
 /*N*/   const XubString &rText = GetText();
-/*N*/   DBG_ASSERT(rText.Len() == 1  &&  rText.GetChar(0) == (xub_Unicode) MS_ERROR,
+/*N*/   DBG_ASSERT(rText.Len() == 1  &&  rText.GetChar(0) == (sal_Unicode) MS_ERROR,
 /*N*/               "Sm : Text ist kein ERROR Symbol");
 /*N*/   SmRect::operator = (SmRect(aTmpDev, &rFormat, rText, GetFont().GetBorderWidth()));
 /*N*/ }
@@ -2371,7 +2371,7 @@ void SmGlyphSpecialNode::Arrange(const OutputDevice &rDev, const SmFormat &rForm
 /*N*/         nSpace = nNum * nDist;
 /*N*/
 /*N*/   // ein SmRect mit Baseline und allem drum und dran besorgen
-/*N*/   SmRect::operator = (SmRect(aTmpDev, &rFormat, XubString(xub_Unicode(' ')),
+/*N*/   SmRect::operator = (SmRect(aTmpDev, &rFormat, XubString(sal_Unicode(' ')),
 /*N*/                              GetFont().GetBorderWidth()));
 /*N*/
 /*N*/   // und dieses auf die gewuenschte Breite bringen

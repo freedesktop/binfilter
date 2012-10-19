@@ -48,10 +48,10 @@ public:
 
 class SwBlankPortion : public SwExpandPortion
 {
-    xub_Unicode cChar;
+    sal_Unicode cChar;
     BOOL bMulti;        // For multiportion brackets
 public:
-    inline  SwBlankPortion( xub_Unicode cCh, BOOL bMult = sal_False )
+    inline  SwBlankPortion( sal_Unicode cCh, BOOL bMult = sal_False )
         : cChar( cCh ), bMulti( bMult )
         { cChar = cCh; SetLen(1); SetWhichPor( POR_BLANK ); }
 

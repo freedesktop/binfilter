@@ -138,7 +138,7 @@ using namespace ::com::sun::star;
 /*N*/     xub_StrLen i = 0;
 /*N*/     for( ; i < nEnd; ++i )
 /*N*/     {
-/*N*/         xub_Unicode cChar = GetTxt().GetChar( i );
+/*N*/         sal_Unicode cChar = GetTxt().GetChar( i );
 /*N*/         if( CH_TAB == cChar || CH_BREAK == cChar ||
 /*N*/             (( CH_TXTATR_BREAKWORD == cChar || CH_TXTATR_INWORD == cChar )
 /*N*/                 && SwTxtSizeInfo::_HasHint( this, i ) ) )

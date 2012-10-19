@@ -239,7 +239,7 @@ start:
             {
                 SbxBase::SetError( SbxERR_OVERFLOW ); dVal = SbxMINCHAR;
             }
-            *p->pChar = (xub_Unicode) dVal; break;
+            *p->pChar = (sal_Unicode) dVal; break;
         case SbxBYREF | SbxBYTE:
             if( dVal > SbxMAXBYTE )
             {

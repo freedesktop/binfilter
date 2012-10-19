@@ -153,7 +153,7 @@ const XubString& SbxVariable::GetName( SbxNameType t ) const
     if( !pInfo
      || ( !pInfo->aParams.Count() && GetClass() == SbxCLASS_PROPERTY ) )
         return maName;
-    xub_Unicode cType = ' ';
+    sal_Unicode cType = ' ';
     XubString aTmp( maName );
     // Kurzer Typ? Dann holen, evtl. ist dieser 0.
     SbxDataType et = GetType();
@@ -228,7 +228,7 @@ USHORT SbxVariable::MakeHashCode( const XubString& rName )
     USHORT nLen = rName.Len();
     if( nLen > 6 )
         nLen = 6;
-    const xub_Unicode* p = rName.GetBuffer();
+    const sal_Unicode* p = rName.GetBuffer();
     while( nLen-- )
     {
         BYTE c = (BYTE)*p;

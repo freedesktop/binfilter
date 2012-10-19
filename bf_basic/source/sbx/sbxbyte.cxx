@@ -266,7 +266,7 @@ void ImpPutByte( SbxValues* p, BYTE n )
             break;
 
         case SbxCHAR:
-            p->nChar = (xub_Unicode) n; break;
+            p->nChar = (sal_Unicode) n; break;
 
         case SbxBYREF | SbxSTRING:
         case SbxSTRING:
@@ -285,7 +285,7 @@ void ImpPutByte( SbxValues* p, BYTE n )
             break;
         }
         case SbxBYREF | SbxCHAR:
-            *p->pChar = (xub_Unicode) n; break;
+            *p->pChar = (sal_Unicode) n; break;
         case SbxBYREF | SbxBYTE:
             *p->pByte = n; break;
         case SbxBYREF | SbxINTEGER:

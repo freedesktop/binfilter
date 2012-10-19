@@ -64,7 +64,7 @@ using namespace ::com::sun::star::linguistic2;
 extern const SwTxtNode *pLinguNode;
 extern       SwTxtFrm  *pLinguFrm;
 
-bool lcl_IsSkippableWhiteSpace( xub_Unicode cCh )
+bool lcl_IsSkippableWhiteSpace( sal_Unicode cCh )
 {
     return 0x3000 == cCh ||
            ' ' == cCh ||
@@ -76,7 +76,7 @@ bool lcl_IsSkippableWhiteSpace( xub_Unicode cCh )
  * Ein Zeichen wurde eingefuegt.
  */
 
-/*N*/ SwTxtNode& SwTxtNode::Insert( xub_Unicode c, const SwIndex &rIdx )
+/*N*/ SwTxtNode& SwTxtNode::Insert( sal_Unicode c, const SwIndex &rIdx )
 /*N*/ {
 /*N*/   xub_StrLen nOrigLen = aText.Len();
 /*N*/

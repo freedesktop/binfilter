@@ -91,8 +91,8 @@ namespace binfilter {
 /*N*/   if( nTabPos < rInf.X() )
 /*N*/       nTabPos = rInf.X();
 /*N*/
-/*N*/   xub_Unicode cFill = 0;
-/*N*/   xub_Unicode cDec = 0;
+/*N*/   sal_Unicode cFill = 0;
+/*N*/   sal_Unicode cDec = 0;
 /*N*/   SvxTabAdjust eAdj;
 /*N*/
 /*N*/   KSHORT nNewTabPos;
@@ -217,7 +217,7 @@ namespace binfilter {
 // Die Basisklasse wird erstmal ohne alles initialisiert.
 
 
-/*N*/ SwTabPortion::SwTabPortion( const KSHORT nTabPosition, const xub_Unicode cFillChar )
+/*N*/ SwTabPortion::SwTabPortion( const KSHORT nTabPosition, const sal_Unicode cFillChar )
 /*N*/   : SwFixPortion( 0, 0 ), nTabPos(nTabPosition), cFill(cFillChar)
 /*N*/ {
 /*N*/   nLineLength = 1;

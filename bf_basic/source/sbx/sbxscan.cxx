@@ -465,10 +465,10 @@ static USHORT printfmtnum( double nNum, XubString& rRes, const XubString& rWFmt 
     if( nLen > nWidth ) rRes += '%';
     else {
         nWidth -= nLen;
-        while( nWidth-- ) rRes += (xub_Unicode)cFill;
-        if( cPre ) rRes += (xub_Unicode)cPre;
+        while( nWidth-- ) rRes += (sal_Unicode)cFill;
+        if( cPre ) rRes += (sal_Unicode)cPre;
     }
-    rRes += (xub_Unicode*)&(cBuf[0]);
+    rRes += (sal_Unicode*)&(cBuf[0]);
     if( bTrail )
         rRes += bNeg ? '-' : ' ';
 

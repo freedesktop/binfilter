@@ -354,8 +354,8 @@ protected:
     SmMathSymbolNode(SmNodeType eNodeType, const SmToken &rNodeToken)
     :   SmSpecialNode(eNodeType, rNodeToken, FNT_MATH)
     {
-        xub_Unicode cChar = GetToken().cMathChar;
-        if ((xub_Unicode) '\0' != cChar)
+        sal_Unicode cChar = GetToken().cMathChar;
+        if ((sal_Unicode) '\0' != cChar)
             SetText( cChar );
     }
 
@@ -398,7 +398,7 @@ public:
     SmPlaceNode(const SmToken &rNodeToken)
     :   SmMathSymbolNode(NPLACE, rNodeToken)
     {
-        SetText((xub_Unicode) MS_PLACE);
+        SetText((sal_Unicode) MS_PLACE);
     }
 
     virtual void Prepare(const SmFormat &rFormat, const SmDocShell &rDocShell);
@@ -415,7 +415,7 @@ public:
     SmErrorNode(SmParseError /*eError*/, const SmToken &rNodeToken)
     :   SmMathSymbolNode(NERROR, rNodeToken)
     {
-        SetText((xub_Unicode) MS_ERROR);
+        SetText((sal_Unicode) MS_ERROR);
     }
 
     virtual void Prepare(const SmFormat &rFormat, const SmDocShell &rDocShell);

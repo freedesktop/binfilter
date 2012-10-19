@@ -1175,7 +1175,7 @@ SV_DECL_PTRARR(SwpHts,SwTxtAttr*,1,1)
 /*M*/         {
 /*M*/             xub_StrLen nI = 0;
 /*M*/             xub_StrLen nTmpPos = aPos;
-/*M*/             xub_Unicode cChar;
+/*M*/             sal_Unicode cChar;
 /*M*/
 /*M*/             while ( nI < rStr.Len() )
 /*M*/             {
@@ -2053,7 +2053,7 @@ SV_DECL_PTRARR(SwpHts,SwTxtAttr*,1,1)
  *************************************************************************/
 // Felder werden expandiert:
 
-/*N*/ void SwTxtNode::Replace( const SwIndex& rStart, xub_Unicode cCh )
+/*N*/ void SwTxtNode::Replace( const SwIndex& rStart, sal_Unicode cCh )
 /*N*/ {
 /*N*/
 /*N*/   OSL_ENSURE( rStart.GetIndex() < aText.Len(), "ausserhalb des Strings" );

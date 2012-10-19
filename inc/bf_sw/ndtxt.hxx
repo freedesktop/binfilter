@@ -122,7 +122,7 @@ public:
      * Einfuegen anderer Datentypen durch Erzeugen eines
      * temporaeren Strings.
      */
-    SwTxtNode&  Insert( xub_Unicode c, const SwIndex &rIdx );
+    SwTxtNode&  Insert( sal_Unicode c, const SwIndex &rIdx );
     SwTxtNode&  Insert( const XubString &rStr, const SwIndex &rIdx,
                         const USHORT nMode = INS_DEFAULT );
 
@@ -174,7 +174,7 @@ public:
     inline void Cut(SwTxtNode *pDest, const SwIndex &rDestStart,
                     const SwIndex &rStart, xub_StrLen nLen);
     // ersetze im String an Position nIdx das Zeichen
-    void Replace( const SwIndex& rStart, xub_Unicode cCh );
+    void Replace( const SwIndex& rStart, sal_Unicode cCh );
 
     // virtuelle Methoden aus dem CntntNode
     virtual SwCntntFrm *MakeFrm();

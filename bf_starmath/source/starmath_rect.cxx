@@ -45,17 +45,17 @@ namespace binfilter {
 // '\0' terminiertes Array mit Zeichen, die im StarMath Font als Buchstaben
 // betrachtet werden sollen, (um im Gegensatz zu den anderen Operatoren
 // und Symbolen ein "normales"(ungecliptes) SmRect zu erhalten).
-static xub_Unicode const aMathAlpha[] =
+static sal_Unicode const aMathAlpha[] =
 {
     MS_ALEPH,               MS_IM,                  MS_RE,
-    MS_WP,                  xub_Unicode(0xE070),    MS_EMPTYSET,
-    xub_Unicode(0x2113),    xub_Unicode(0xE0D6),    xub_Unicode(0x2107),
-    xub_Unicode(0x2127),    xub_Unicode(0x210A),    MS_HBAR,
+    MS_WP,                  sal_Unicode(0xE070),    MS_EMPTYSET,
+    sal_Unicode(0x2113),    sal_Unicode(0xE0D6),    sal_Unicode(0x2107),
+    sal_Unicode(0x2127),    sal_Unicode(0x210A),    MS_HBAR,
     MS_LAMBDABAR,           MS_SETN,                MS_SETZ,
     MS_SETQ,                MS_SETR,                MS_SETC,
-    xub_Unicode(0x2373),    xub_Unicode(0xE0A5),    xub_Unicode(0x2112),
-    xub_Unicode(0x2130),    xub_Unicode(0x2131),
-    xub_Unicode('\0')
+    sal_Unicode(0x2373),    sal_Unicode(0xE0A5),    sal_Unicode(0x2112),
+    sal_Unicode(0x2130),    sal_Unicode(0x2131),
+    sal_Unicode('\0')
 };
 
 /*N*/ BOOL SmIsMathAlpha(const XubString &rText)
@@ -66,18 +66,18 @@ static xub_Unicode const aMathAlpha[] =
 /*N*/       return FALSE;
 /*N*/
 /*N*/   DBG_ASSERT(rText.Len() == 1, "Sm : String enthaelt nicht genau ein Zeichen");
-/*N*/   xub_Unicode cChar = rText.GetChar(0);
+/*N*/   sal_Unicode cChar = rText.GetChar(0);
 /*N*/
 /*N*/   // ist es ein griechisches Zeichen ?
-/*N*/     if (xub_Unicode(0xE0AC) <= cChar  &&  cChar <= xub_Unicode(0xE0D4))
+/*N*/     if (sal_Unicode(0xE0AC) <= cChar  &&  cChar <= sal_Unicode(0xE0D4))
 /*N*/       return TRUE;
 /*N*/   else
 /*N*/   {
 /*N*/       // kommt es in 'aMathAlpha' vor ?
-/*N*/       const xub_Unicode *pChar = aMathAlpha;
+/*N*/       const sal_Unicode *pChar = aMathAlpha;
 /*N*/       while (*pChar  &&  *pChar != cChar)
 /*N*/           pChar++;
-/*N*/       return *pChar != xub_Unicode('\0');
+/*N*/       return *pChar != sal_Unicode('\0');
 /*N*/   }
 /*N*/ }
 

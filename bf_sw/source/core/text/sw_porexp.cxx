@@ -107,7 +107,7 @@ namespace binfilter {
 /*N*/           xub_StrLen nBlank = nIdx;
 /*N*/           while( --nBlank > rInf.GetLineStart() )
 /*N*/           {
-/*N*/               const xub_Unicode cCh = rInf.GetChar( nBlank );
+/*N*/               const sal_Unicode cCh = rInf.GetChar( nBlank );
 /*N*/               if( CH_BLANK == cCh ||
 /*N*/                   (( CH_TXTATR_BREAKWORD == cCh || CH_TXTATR_INWORD == cCh )
 /*N*/                       && rInf.HasHint( nBlank ) ) )
@@ -117,7 +117,7 @@ namespace binfilter {
 /*N*/               return 0;
 /*N*/       }
 /*N*/   }
-/*N*/   xub_Unicode cCh;
+/*N*/   sal_Unicode cCh;
 /*N*/   if( nIdx < 2 || CH_BLANK == (cCh = rInf.GetChar( nIdx - 1 )) )
 /*N*/       return 1;
 /*N*/   if( CH_BREAK == cCh )

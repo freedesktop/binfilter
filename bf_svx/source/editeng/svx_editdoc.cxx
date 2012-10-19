@@ -1192,13 +1192,13 @@ using namespace ::com::sun::star;
 /*N*/
 /*N*/   if ( nSepSize )
 /*N*/       nLen += nNodes * nSepSize;
-/*N*/   if ( nLen > 0xFFFb / sizeof(xub_Unicode) )
+/*N*/   if ( nLen > 0xFFFb / sizeof(sal_Unicode) )
 /*N*/   {
 /*?*/       OSL_FAIL( "Text zu gross fuer String" );
 /*?*/       return XubString();
 /*N*/   }
-/*N*/   xub_Unicode* pStr = new xub_Unicode[nLen+1];
-/*N*/   xub_Unicode* pCur = pStr;
+/*N*/   sal_Unicode* pStr = new sal_Unicode[nLen+1];
+/*N*/   sal_Unicode* pCur = pStr;
 /*N*/   USHORT nLastNode = nNodes-1;
 /*N*/   for ( USHORT nNode = 0; nNode < nNodes; nNode++ )
 /*N*/   {

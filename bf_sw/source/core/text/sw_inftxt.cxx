@@ -656,12 +656,12 @@ extern Color aGlobalRetoucheColor;
 /*N*/                                             const xub_StrLen nEnd )
 /*N*/ {
 /*N*/   cHookChar = 0;
-/*N*/   const xub_Unicode cTabDec = GetLastTab() ? (sal_Unicode)GetTabDecimal() : 0;
+/*N*/   const sal_Unicode cTabDec = GetLastTab() ? (sal_Unicode)GetTabDecimal() : 0;
 /*N*/   xub_StrLen i = nStart;
 /*N*/
 /*N*/   for( ; i < nEnd; ++i )
 /*N*/   {
-/*N*/       const xub_Unicode cPos = GetChar( i );
+/*N*/       const sal_Unicode cPos = GetChar( i );
 /*N*/       switch( cPos )
 /*N*/       {
 /*N*/       case CH_TXTATR_BREAKWORD:

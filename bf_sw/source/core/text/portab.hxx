@@ -29,12 +29,12 @@ namespace binfilter {
 class SwTabPortion : public SwFixPortion
 {
     const KSHORT nTabPos;
-    const xub_Unicode cFill;
+    const sal_Unicode cFill;
 
     // Das Format() verzweigt entweder in Pre- oder PostFormat()
     sal_Bool PreFormat( SwTxtFormatInfo &rInf );
 public:
-    SwTabPortion( const KSHORT nTabPos, const xub_Unicode cFill = '\0' );
+    SwTabPortion( const KSHORT nTabPos, const sal_Unicode cFill = '\0' );
     virtual sal_Bool Format( SwTxtFormatInfo &rInf );
     virtual void FormatEOL( SwTxtFormatInfo &rInf );
     sal_Bool PostFormat( SwTxtFormatInfo &rInf );
@@ -53,7 +53,7 @@ public:
 class SwTabLeftPortion : public SwTabPortion
 {
 public:
-    inline SwTabLeftPortion( const KSHORT nTabPos1, const xub_Unicode cFill1='\0' )
+    inline SwTabLeftPortion( const KSHORT nTabPos1, const sal_Unicode cFill1='\0' )
          : SwTabPortion( nTabPos1, cFill1 )
     { SetWhichPor( POR_TABLEFT ); }
     OUTPUT_OPERATOR
@@ -66,7 +66,7 @@ public:
 class SwTabRightPortion : public SwTabPortion
 {
 public:
-    inline SwTabRightPortion( const KSHORT nTabPos2, const xub_Unicode cFill2='\0' )
+    inline SwTabRightPortion( const KSHORT nTabPos2, const sal_Unicode cFill2='\0' )
          : SwTabPortion( nTabPos2, cFill2 )
     { SetWhichPor( POR_TABRIGHT ); }
     OUTPUT_OPERATOR
@@ -79,7 +79,7 @@ public:
 class SwTabCenterPortion : public SwTabPortion
 {
 public:
-    inline SwTabCenterPortion( const KSHORT nTabPos3, const xub_Unicode cFill3='\0' )
+    inline SwTabCenterPortion( const KSHORT nTabPos3, const sal_Unicode cFill3='\0' )
          : SwTabPortion( nTabPos3, cFill3 )
     { SetWhichPor( POR_TABCENTER ); }
     OUTPUT_OPERATOR
@@ -91,13 +91,13 @@ public:
 
 class SwTabDecimalPortion : public SwTabPortion
 {
-    const xub_Unicode cTab;
+    const sal_Unicode cTab;
 public:
-    inline SwTabDecimalPortion( const KSHORT nTabPos4, const xub_Unicode cInTab,
-                                const xub_Unicode cFill4 = '\0' )
+    inline SwTabDecimalPortion( const KSHORT nTabPos4, const sal_Unicode cInTab,
+                                const sal_Unicode cFill4 = '\0' )
          : SwTabPortion( nTabPos4, cFill4 ), cTab(cInTab)
     { SetWhichPor( POR_TABDECIMAL ); }
-    inline xub_Unicode GetTabDecimal() const { return cTab; }
+    inline sal_Unicode GetTabDecimal() const { return cTab; }
     OUTPUT_OPERATOR
 };
 

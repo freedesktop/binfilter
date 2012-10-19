@@ -451,7 +451,7 @@ public:
  *                      class SwBulletPortion
  *************************************************************************/
 
-/*N*/ SwBulletPortion::SwBulletPortion( const xub_Unicode cBullet, SwFont *pFont,
+/*N*/ SwBulletPortion::SwBulletPortion( const sal_Unicode cBullet, SwFont *pFont,
 /*N*/                   const sal_Bool bLft, const sal_Bool bCntr, const KSHORT nMinDst )
 /*N*/   : SwNumberPortion( XubString( cBullet ), pFont, bLft, bCntr, nMinDst )
 /*N*/ {

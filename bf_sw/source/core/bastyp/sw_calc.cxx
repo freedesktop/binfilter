@@ -1234,7 +1234,7 @@ static int
 /*N*/   if( !pLclD )
 /*N*/       pLclD = &GetAppLocaleData();
 /*N*/
-/*N*/   const xub_Unicode nCurrCmdPos = rCommandPos;
+/*N*/   const sal_Unicode nCurrCmdPos = rCommandPos;
 /*N*/     rtl_math_ConversionStatus eStatus;
 /*N*/     const sal_Unicode* pEnd;
 /*N*/     rVal = rtl_math_uStringToDouble( rCommand.GetBuffer() + rCommandPos,
@@ -1264,7 +1264,7 @@ static int
 /*N*/                           SvxCreateLocale( eLang ) );
 /*N*/   }
 /*N*/
-/*N*/   const xub_Unicode nCurrCmdPos = rCommandPos;
+/*N*/   const sal_Unicode nCurrCmdPos = rCommandPos;
 /*N*/     rtl_math_ConversionStatus eStatus;
 /*N*/     const sal_Unicode* pEnd;
 /*N*/     rVal = rtl_math_uStringToDouble( rCommand.GetBuffer() + rCommandPos,

@@ -729,7 +729,7 @@ inline Cursor* ImpEditView::GetCursor()
     return pCursor;
 }
 
-BYTE GetCharTypeForCompression( xub_Unicode cChar );
+BYTE GetCharTypeForCompression( sal_Unicode cChar );
 Point Rotate( const Point& rPoint, short nOrientation, const Point& rOrigin );
 
 }//end of namespace binfilter

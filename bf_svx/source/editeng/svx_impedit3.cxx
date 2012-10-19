@@ -1604,7 +1604,7 @@ struct TabInfo
 /*N*/         String aWord = GetSelected( aWordSel );
 /*N*/         xub_StrLen nIdx = 0;
 /*N*/         xub_StrLen nKashidaPos = STRING_LEN;
-/*N*/         xub_Unicode cCh;
+/*N*/         sal_Unicode cCh;
 /*N*/
 /*N*/         while ( nIdx < aWord.Len() )
 /*N*/         {

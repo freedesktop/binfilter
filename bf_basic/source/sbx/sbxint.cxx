@@ -594,7 +594,7 @@ start:
             {
                 SbxBase::SetError( SbxERR_OVERFLOW ); n = SbxMINCHAR;
             }
-            *p->pChar = (xub_Unicode) n; break;
+            *p->pChar = (sal_Unicode) n; break;
         case SbxBYREF | SbxBYTE:
             if( n > SbxMAXBYTE )
             {
@@ -897,7 +897,7 @@ start:
             {
                 SbxBase::SetError( SbxERR_OVERFLOW ); n = SbxMAXCHAR;
             }
-            *p->pChar = (xub_Unicode) n; break;
+            *p->pChar = (sal_Unicode) n; break;
         case SbxBYREF | SbxBYTE:
             if( n > SbxMAXBYTE )
             {

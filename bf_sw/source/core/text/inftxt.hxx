@@ -271,7 +271,7 @@ public:
 
     inline const  SwViewOption &GetOpt() const { return *pOpt; }
     inline const XubString &GetTxt() const { return *pTxt; }
-    inline xub_Unicode GetChar( const xub_StrLen nPos ) const
+    inline sal_Unicode GetChar( const xub_StrLen nPos ) const
         { return pTxt->GetChar( nPos ); }
 
     inline KSHORT      GetTxtHeight() const;
@@ -491,8 +491,8 @@ class SwTxtFormatInfo : public SwTxtPaintInfo
                                 // info structure only pretends that we are at
                                 // the beginning of a line
 
-    xub_Unicode   cTabDecimal;  // das _aktuelle_ Dezimalzeichen
-    xub_Unicode   cHookChar;    // fuer Tabs in Feldern etc.
+    sal_Unicode   cTabDecimal;  // das _aktuelle_ Dezimalzeichen
+    sal_Unicode   cHookChar;    // fuer Tabs in Feldern etc.
     sal_uInt8   nMaxHyph;       // max. Zeilenanz. aufeinanderfolg. Trenn.
     sal_Bool   bTestFormat;     // Testformatierung aus WouldFit, keine Benachrichtigungen etc.
 
@@ -596,16 +596,16 @@ public:
     // Tabs
     inline SwTabPortion *GetLastTab() { return pLastTab; }
     inline void SetLastTab( SwTabPortion *pNew ) { pLastTab = pNew; }
-    inline xub_Unicode GetTabDecimal() const { return cTabDecimal; }
-    inline void SetTabDecimal( const xub_Unicode cNew ) { cTabDecimal = cNew;}
+    inline sal_Unicode GetTabDecimal() const { return cTabDecimal; }
+    inline void SetTabDecimal( const sal_Unicode cNew ) { cTabDecimal = cNew;}
 
     // Last*
     inline SwFldPortion *GetLastFld() { return pLastFld; }
     inline void SetLastFld( SwFldPortion *pNew ) { pLastFld = pNew; }
 
     inline void ClearHookChar() { cHookChar = 0; }
-    inline void SetHookChar( const xub_Unicode cNew ) { cHookChar = cNew; }
-    inline xub_Unicode GetHookChar() const { return cHookChar; }
+    inline void SetHookChar( const sal_Unicode cNew ) { cHookChar = cNew; }
+    inline sal_Unicode GetHookChar() const { return cHookChar; }
 
     // Done-Flags
     inline sal_Bool IsFtnDone() const { return bFtnDone; }

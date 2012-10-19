@@ -211,7 +211,7 @@ using rtl::OUString;
 /*M*/     xub_StrLen nPorLen = 0;
 /*M*/ #ifdef VERTICAL_LAYOUT
 /*M*/     // do not call the break iterator nCutPos is a blank
-/*M*/     xub_Unicode cCutChar = rInf.GetTxt().GetChar( nCutPos );
+/*M*/     sal_Unicode cCutChar = rInf.GetTxt().GetChar( nCutPos );
 /*M*/     if( CH_BLANK == cCutChar || CH_FULL_BLANK == cCutChar )
 /*M*/ #else
 /*M*/     if( CH_BLANK == rInf.GetTxt().GetChar( nCutPos ) )
@@ -257,7 +257,7 @@ using rtl::OUString;
 /*M*/
 /*M*/         xub_StrLen nOldIdx = rInf.GetIdx();
 /*M*/ #ifdef VERTICAL_LAYOUT
-/*M*/         xub_Unicode cFldChr = 0;
+/*M*/         sal_Unicode cFldChr = 0;
 /*M*/ #else
 /*M*/         sal_Char cFldChr = 0;
 /*M*/ #endif

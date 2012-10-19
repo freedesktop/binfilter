@@ -1080,7 +1080,7 @@ extern sal_Bool IsUnderlineBreak( const SwLinePortion& rPor, const SwFont& rFnt 
 /*M*/   if( !pPor )
 /*M*/   {
 /*M*/       // 5010: Tabs und Felder
-/*M*/       xub_Unicode cChar = rInf.GetHookChar();
+/*M*/       sal_Unicode cChar = rInf.GetHookChar();
 /*M*/
 /*M*/       if( cChar )
 /*M*/       {
@@ -1656,7 +1656,7 @@ extern sal_Bool IsUnderlineBreak( const SwLinePortion& rPor, const SwFont& rFnt 
 /*N*/     const xub_StrLen nReformat = GetInfo().GetReformatStart();
 /*N*/     if( bOptimizeRepaint && STRING_LEN != nReformat )
 /*N*/   {
-/*N*/         const xub_Unicode cCh = GetInfo().GetTxt().GetChar( nReformat );
+/*N*/         const sal_Unicode cCh = GetInfo().GetTxt().GetChar( nReformat );
 /*N*/         bOptimizeRepaint = ( CH_TXTATR_BREAKWORD != cCh && CH_TXTATR_INWORD != cCh )
 /*N*/                             || ! GetInfo().HasHint( nReformat );
 /*N*/   }

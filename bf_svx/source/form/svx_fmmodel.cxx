@@ -257,7 +257,7 @@ void FmFormModel::MovePage( USHORT, USHORT )
 /*N*/ {
 /*N*/   XubString sReturn = m_pImpl->sNextPageId;
 /*N*/
-/*N*/   xub_Unicode aNextChar = m_pImpl->sNextPageId.GetChar(m_pImpl->sNextPageId.Len() - 1);
+/*N*/   sal_Unicode aNextChar = m_pImpl->sNextPageId.GetChar(m_pImpl->sNextPageId.Len() - 1);
 /*N*/   sal_Bool bNeedNewChar = sal_False;
 /*N*/   switch (aNextChar)
 /*N*/   {

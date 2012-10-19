@@ -23,10 +23,10 @@
 
 namespace binfilter {
 
-xub_Unicode ImpGetChar( const SbxValues* p )
+sal_Unicode ImpGetChar( const SbxValues* p )
 {
     SbxValues aTmp;
-    xub_Unicode nRes;
+    sal_Unicode nRes;
 start:
     switch( +p->eType )
     {
@@ -37,7 +37,7 @@ start:
         case SbxCHAR:
             nRes = p->nChar; break;
         case SbxBYTE:
-            nRes = (xub_Unicode) p->nByte;
+            nRes = (sal_Unicode) p->nByte;
             break;
         case SbxINTEGER:
         case SbxBOOL:
@@ -46,11 +46,11 @@ start:
                 SbxBase::SetError( SbxERR_OVERFLOW ); nRes = SbxMINCHAR;
             }
             else
-                nRes = (xub_Unicode) p->nInteger;
+                nRes = (sal_Unicode) p->nInteger;
             break;
         case SbxERROR:
         case SbxUSHORT:
-            nRes = (xub_Unicode) p->nUShort;
+            nRes = (sal_Unicode) p->nUShort;
             break;
         case SbxLONG:
             if( p->nLong > SbxMAXCHAR )
@@ -62,7 +62,7 @@ start:
                 SbxBase::SetError( SbxERR_OVERFLOW ); nRes = SbxMINCHAR;
             }
             else
-                nRes = (xub_Unicode) p->nLong;
+                nRes = (sal_Unicode) p->nLong;
             break;
         case SbxULONG:
             if( p->nULong > SbxMAXCHAR )
@@ -70,7 +70,7 @@ start:
                 SbxBase::SetError( SbxERR_OVERFLOW ); nRes = SbxMAXCHAR;
             }
             else
-                nRes = (xub_Unicode) p->nULong;
+                nRes = (sal_Unicode) p->nULong;
             break;
         case SbxSALINT64:
             if( p->nInt64 > SbxMAXCHAR )
@@ -82,7 +82,7 @@ start:
                 SbxBase::SetError( SbxERR_OVERFLOW ); nRes = SbxMINCHAR;
             }
             else
-                nRes = (xub_Unicode) p->nInt64;
+                nRes = (sal_Unicode) p->nInt64;
             break;
         case SbxSALUINT64:
             if( p->uInt64 > SbxMAXCHAR )
@@ -90,7 +90,7 @@ start:
                 SbxBase::SetError( SbxERR_OVERFLOW ); nRes = SbxMAXCHAR;
             }
             else
-                nRes = (xub_Unicode) p->uInt64;
+                nRes = (sal_Unicode) p->uInt64;
             break;
         case SbxSINGLE:
             if( p->nSingle > SbxMAXCHAR )
@@ -102,7 +102,7 @@ start:
                 SbxBase::SetError( SbxERR_OVERFLOW ); nRes = SbxMINCHAR;
             }
             else
-                nRes = (xub_Unicode) ImpRound( p->nSingle );
+                nRes = (sal_Unicode) ImpRound( p->nSingle );
             break;
         case SbxDATE:
         case SbxDOUBLE:
@@ -160,7 +160,7 @@ start:
                     SbxBase::SetError( SbxERR_OVERFLOW ); nRes = SbxMINCHAR;
                 }
                 else
-                    nRes = (xub_Unicode) ImpRound( d );
+                    nRes = (sal_Unicode) ImpRound( d );
             }
             break;
         case SbxOBJECT:
@@ -214,7 +214,7 @@ start:
     return nRes;
 }
 
-void ImpPutChar( SbxValues* p, xub_Unicode n )
+void ImpPutChar( SbxValues* p, sal_Unicode n )
 {
     SbxValues aTmp;
 start:

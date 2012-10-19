@@ -648,7 +648,7 @@ SwLinePortion *SwLineLayout::Insert( SwLinePortion *pIns )
 /*?*/
 /*?*/             while ( nLastCompression < nChg )
 /*?*/             {
-/*?*/                 xub_Unicode cChar = rTxt.GetChar( nLastCompression );
+/*?*/                 sal_Unicode cChar = rTxt.GetChar( nLastCompression );
 /*?*/
 /*?*/                 // examine current character
 /*?*/                 switch ( cChar )
